@@ -175,8 +175,9 @@ ul{
     background-color: white;
     z-index: 2;
     width: 75%;
-    height: 95%;
+    height: 90%;
     border-radius: 5px;
+    overflow: hidden;
 }
 
 .imgModal{
@@ -184,6 +185,22 @@ ul{
     height: 100%;
     overflow: hidden;
     border-radius: 5px;
+}
+
+.btn-close{
+    background: none;
+    color: White;
+    font-size: 2.2rem;
+    /* background-image: url('../img/btn-close-icon6.png');
+    background-size: cover; */
+    border: none;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    cursor: pointer;
 }
 
 
