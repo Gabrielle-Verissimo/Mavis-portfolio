@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Akronim&family=Comfortaa&family=Dancing+Script&family=Ephesis&family=IM+Fell+English+SC&family=Indie+Flower&family=Italianno&family=Lobster&family=Nunito&family=Pacifico&family=Satisfy&family=Slabo+27px&display=swap');
+
+:root{
+    --color-padrao: rgb(0, 23, 43);;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background: var(--color-padrao);
+    /* background-image: url('../../img/background.svg'); */
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+#cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    width: 100%;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    color: var(--color-padrao);
+}
+
+#cabecalho h1{
+    margin-left: 15px;
+    font-family: 'Comfortaa', cursive;
+}
+
+#menu ul{ 
+    display: flex;
+    flex-direction: row;
+    margin-right: 50px;
+}   
+
+#menu ul li{
+    margin: 0 5px;
+    /* background-color: aliceblue; */
+    position: relative;
+    transition: all 300ms ease-in-out;
+}
+
+#menu ul li a{
+    color: inherit;
+    padding: 5px 10px;
+    border-radius: 7px;
+    /* font-family: 'Slabo 27px', serif; */
+    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    transition: all 300ms ease-in-out;
+}
+
+#menu ul li a:hover{
+    background-color: rgba(0, 0, 0, 0.053);
+}
+
+#menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 23, 43);; 
+    transition: all 300ms ease-in-out;
+}
+  
+#menu ul li a:hover::after {
+    width: 50%;
+    left: 25%;
+}
+
+.menu-spacing {
+    height: 55px;
+}
+
+#inicio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+    color: var(--color-padrao);;
+}
+
+
+.div-inicio{
+    margin: 0px 20px; 
+    background-color: white;
+    padding: 10px;
+}
+
+/* .background{
+    background-image: url('../../img/background-header.svg');
+    background-size: cover;
+    background-position: center center;
+} */
+
+#trabalhos{
+    min-height: 100vh;
+}
+
+#trabalhos h1{
+    /* font-family: 'Nunito', sans-serif; */
+    margin-top: 40px;
+    margin-bottom: 50px;
+    font-size: 2rem;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    text-align: center;
+}
+
+#container-img{
+    margin-top: 12px;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.img{
+    width: 275px;
+    height: 275px;
+    /* height: 40vh; */
+    /* background-color: white; */
+    padding: 0px;
+    border: solid 10px white;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    background-position: center;
+    transition: all 300ms ease-in-out;
+}
+
+.img:hover{
+    transform: scale(1.2);
+    cursor: pointer; 
+}
+
+.backModal{
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.575);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    background-color: white;
+    z-index: 2;
+    width: 75%;
+    height: 95%;
+    border-radius: 5px;
+}
+
+.imgModal{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+
+/* .img{
+    width: 275px;
+    height: 275px;
+    padding: 0px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}  */
+
+/* .img img{
+    width: 100%;
+    height: 100%;
+    border: solid 10px white;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all;
+    transition: all 300ms ease-in-out;
+} */
+
+/*.img img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+*/
