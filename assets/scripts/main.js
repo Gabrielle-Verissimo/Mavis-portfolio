@@ -1,4 +1,4 @@
-import Images from './function.js';
+import Images from './images.js';
 const container = document.querySelector('#container-img');
 
 function loadImg(){
@@ -7,12 +7,12 @@ function loadImg(){
         div.classList = 'img';
         div.style.backgroundImage = `url('./assets/img/${item.name}.png')`;
         container.appendChild(div);
-        div.addEventListener('click', openImgInfo);
+        div.addEventListener('click', openModal);
     })
 }
 
 
-function openImgInfo(e){
+function openModal(e){
     const imgClicked = e.target.style.backgroundImage;
     const urlImg = imgClicked.slice(5, -2);
     const nameImg = urlImg.slice(13, -4);
@@ -47,16 +47,26 @@ function openImgInfo(e){
     modal.appendChild(areaImg);
     modal.appendChild(info);
     modal.appendChild(btnClose);
-    console.log(btnClose.parentNode);
     background.appendChild(modal);
     body.appendChild(background);
-    btnClose.addEventListener('click', closeImgInfo);
+    btnClose.addEventListener('click', closeModal);
+    a.addEventListener('click', openImg);
 }
 
-function closeImgInfo(e){
+function closeModal(e){
     const background = document.querySelector('.backModal');
     background.parentNode.removeChild(background);
+    
 }
 
+function openImg(e){
+    const img = e.target;
+    const body = document.querySelector('body');
+    //e.preventDefault();
+    const btnClose = document.createElement('span');
+    btnClose.classList = 'btn-close2';
+    btnClose.innerHTML = '<i class="fas fa-times"></i>';
+    img.appendChild(btnClose);
+}
 
 loadImg();
