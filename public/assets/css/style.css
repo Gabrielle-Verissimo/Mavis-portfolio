@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Akronim&family=Comfortaa&family=Dancing+Script&family=Ephesis&family=IM+Fell+English+SC&family=Indie+Flower&family=Italianno&family=Lobster&family=Nunito&family=Pacifico&family=Satisfy&family=Slabo+27px&display=swap');
 
 :root{
-    --color-padrao: rgb(0, 23, 43);;
+    --color-padrao: rgb(0, 23, 43);
 }
 
 *{
@@ -94,41 +94,8 @@ ul{
     height: 55px;
 }
 
-#inicio{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 50px;
-    position: relative;
-    font-family: 'Nunito', sans-serif;
-    color: var(--color-padrao);;
-}
-
-
-.div-inicio{
-    margin: 0px 20px; 
-    background-color: white;
-    padding: 10px;
-}
-
-/* .background{
-    background-image: url('../../img/background-header.svg');
-    background-size: cover;
-    background-position: center center;
-} */
-
-#trabalhos{
+section{
     min-height: 100vh;
-}
-
-#trabalhos h1{
-    /* font-family: 'Nunito', sans-serif; */
-    margin-top: 40px;
-    margin-bottom: 50px;
-    font-size: 2rem;
-    font-family: 'Comfortaa', cursive;
-    color: white;
-    text-align: center;
 }
 
 #container-img{
@@ -175,8 +142,8 @@ ul{
     /* grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); */
     /* grid-template-columns: auto auto auto auto auto; */
     grid-template-areas: 
-    'image image image image info button'
-    'image image image image info button';
+    'image image image info info button'
+    'image image image info info button';
     gap: 10px;
     background-color: white;
     z-index: 2;
@@ -240,5 +207,93 @@ ul{
 
 .btn-close2{
     background-color: white;
-    
+    width: 200px;
+    height: 200px;  
+}
+
+#sobre{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    position: absolute;
+    font-family: 'Nunito', sans-serif;
+    color: var(--color-padrao);
+    min-height: 100vh;
+}
+
+#contato h1{
+    margin-bottom: 50px;
+    font-size: 2rem;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    text-align: center;
+}
+
+.titulo-back-blue{
+    margin-top: 40px;
+    margin-bottom: 50px;
+    font-size: 2rem;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    text-align: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.form div{
+    margin-bottom: 20px;
+}
+
+.form div input{
+    width: 400px;
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.form label{
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.form .msg{
+    width: 400px;
+    height: 150px;
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+    resize: none;
+}
+
+/* .form .container-msg{
+    display: flex;
+    align-items: center;
+} */
+
+.form .btn-send{
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+    background-color: white;
+    color: var(--color-padrao);
+    font-family: 'Comfortaa', cursive;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 350ms ease-in-out;
+}
+
+.form .btn-send:hover{
+    background-color: var(--color-padrao);
+    border: solid 1px white;
+    color: white;
+    cursor: pointer;
 }

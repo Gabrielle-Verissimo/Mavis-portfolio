@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/img/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <title>Mavis</title>
+
+</head>
+<body>
+    <header id="cabecalho">
+
+        <h1>Mavis</h1>
+
+        <nav id="menu">
+            <ul>
+                <!-- <li><a href="#inicio">Início</a></li> -->
+                <li><a href="#trabalhos">Trabalhos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>       
+            </ul>
+        </nav>
+    </header>
+
+    <div class="menu-spacing"></div>
+
+    <section id="trabalhos">
+            <h1 class="titulo-back-blue">Trabalhos</h1>
+            <div id="container-img"></div>
+    </section>
+
+    <section id="sobre">
+        <div id="perfil">
+            <div id="photo-perfil"></div>
+            <div id="info-perfil"></div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h1 class="titulo-back-blue">Contato</h1>
+        <form class="form" action="/send-message" method="POST">
+            <div>
+                <label>Nome:</label> <br>
+                <input type="text" name="name">
+            </div>
+           
+            <div>
+                <label for="">Email:</label> <br>
+                <input type="email" name="email">
+            </div>
+            <br>
+            <div class="container-msg">
+                <label>Mensagem:</label> <br>
+                <textarea name="message" id="" cols="30" rows="10" class="msg"></textarea>
+            </div>
+
+            <button type="submit" class="btn-send">Enviar</button>
+        </form>
+    </section>
+
+    <script type="module" src="main.js"></script>
+    <script src="https://kit.fontawesome.com/72f484ef59.js" crossorigin="anonymous"></script>
+</body>
+</html>
