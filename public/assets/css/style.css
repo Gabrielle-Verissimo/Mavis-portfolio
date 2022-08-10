@@ -26,6 +26,10 @@ ul{
     list-style: none;
 }
 
+section{
+    min-height: 100vh;
+}
+
 #cabecalho{
     display: flex;
     justify-content: space-between;
@@ -39,6 +43,7 @@ ul{
     z-index: 1;
     background-color: rgb(255, 255, 255);
     color: var(--color-padrao);
+    border-bottom: 1px solid var(--color-padrao);
 }
 
 #cabecalho h1{
@@ -92,10 +97,6 @@ ul{
 
 .menu-spacing {
     height: 55px;
-}
-
-section{
-    min-height: 100vh;
 }
 
 #container-img{
@@ -212,22 +213,63 @@ section{
 }
 
 #sobre{
-    display: flex;
+    background-color: white;
+    padding-top: 40px;
+    /* display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 50px;
     position: absolute;
     font-family: 'Nunito', sans-serif;
     color: var(--color-padrao);
-    min-height: 100vh;
+    min-height: 100vh; */
 }
 
-#contato h1{
-    margin-bottom: 50px;
-    font-size: 2rem;
-    font-family: 'Comfortaa', cursive;
-    color: white;
-    text-align: center;
+#container-perfil{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+#perfil{
+    /* display: grid;
+    grid-template-columns: 300px auto;
+    gap: 70px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+#photo-perfil{
+    display: flex;
+    position: relative;
+    width: 270px;
+    height: 320px;
+    border: 10px solid  var(--color-padrao);
+    border-radius: 5px;
+    left: 30px;
+    background-color: var(--color-padrao);
+    margin-top: 12px;
+    justify-content: center;
+}
+
+#photo-perfil img{
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+}
+
+#info-perfil{
+    display: flex;
+    width: 70%;
+    align-items: center;
+    border: 1px solid black;
+    /* margin-right: 20px; */
+}
+
+#info-perfil p{
+    /* margin: 10px; */
+    text-align: justify;
+    font-size: 1.2rem;
 }
 
 .titulo-back-blue{
@@ -236,6 +278,15 @@ section{
     font-size: 2rem;
     font-family: 'Comfortaa', cursive;
     color: white;
+    text-align: center;
+}
+
+
+.titulo-back-white{
+    margin-bottom: 50px;
+    font-size: 2rem;
+    font-family: 'Comfortaa', cursive;
+    color: var(--color-padrao);
     text-align: center;
 }
 
