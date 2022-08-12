@@ -34,7 +34,7 @@
 
     <section id="sobre">
         <h1 class="titulo-back-white">Sobre</h1>
-        <div id="container-perfil">
+        <!-- <div id="container-perfil"> -->
             <div id="perfil">
                 <div id="photo-perfil">
                     <img src="./assets/img/mavis-perfil.png" alt="">
@@ -53,27 +53,34 @@
                         Ao passar do curso e com o estágio acabei entrando no mundo dos 
                         Social Media e fazendo alguma ilustrações para algumas empresas.
                     </p>
+                    <p>
+                        Para ver meus outros trabalhos acesse: 
+                        <a target="_blank" href="https://www.behance.net/vitoriamaria3/projects">https://www.behance.net/vitoriamaria3/projects</a>
+                    </p>
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
     </section>
 
     <section id="contato">
-        <h1 class="titulo-back-blue">Contato</h1>
+        <h1 class="titulo-back-blue">Contato <br>
+            <span>Me mande uma mensagem se quiser saber mais do meu trabalho, dar alguma sugestão ou me contratar.</span>
+        </h1>
+
         <form class="form" action="/send-message" method="POST">
             <div>
-                <label>Nome:</label> <br>
-                <input type="text" name="name">
+                <!-- <label>Nome:</label> <br> -->
+                <input type="text" name="name" placeholder="Nome">
             </div>
            
             <div>
-                <label for="">Email:</label> <br>
-                <input type="email" name="email">
+                <!-- <label for="">Email:</label> <br> -->
+                <input type="email" name="email" placeholder="Email">
             </div>
             <br>
             <div class="container-msg">
-                <label>Mensagem:</label> <br>
-                <textarea name="message" id="" cols="30" rows="10" class="msg"></textarea>
+                <!-- <label>Mensagem:</label> <br> -->
+                <textarea name="message" id="" cols="30" rows="10" class="msg" placeholder="Mensagem"></textarea>
             </div>
 
             <button type="submit" class="btn-send">Enviar</button>

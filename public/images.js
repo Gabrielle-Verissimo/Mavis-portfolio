@@ -51,6 +51,10 @@ function openModal(e){
     const img = document.createElement('img');
     const body = document.querySelector('body');
     const btnClose = document.createElement('span');
+    // const sections = document.getElementsByTagName('section');
+    // for(let i = 0; i < sections.length; i++){
+    //     sections[i].classList.add('no-scroll');
+    // }
     let description;
     
     images.forEach(item => {
@@ -77,11 +81,14 @@ function openModal(e){
     modal.appendChild(btnClose);
     background.appendChild(modal);
     body.appendChild(background);
+    body.classList.add('no-scroll');
     btnClose.addEventListener('click', closeModal);
 }
 
 function closeModal(e){
     const background = document.querySelector('.backModal');
+    const body = document.querySelector('body');
+    body.classList.remove('no-scroll');
     background.parentNode.removeChild(background);
     
 }

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Akronim&family=Comfortaa&family=Dancing+Script&family=Ephesis&family=IM+Fell+English+SC&family=Indie+Flower&family=Italianno&family=Lobster&family=Nunito&family=Pacifico&family=Satisfy&family=Slabo+27px&display=swap');
 
 :root{
-    --color-padrao: rgb(0, 23, 43);
+    --color-padrao: #00172b;
 }
 
 *{
@@ -213,39 +213,28 @@ section{
 }
 
 #sobre{
-    background-color: white;
-    padding-top: 40px;
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 50px;
-    position: absolute;
-    font-family: 'Nunito', sans-serif;
+    background-color: #007DEB;
+    background-color: pink;
     color: var(--color-padrao);
-    min-height: 100vh; */
+    padding-top: 40px;
+    min-width: 100%;
 }
 
-#container-perfil{
-    display: flex;
-    justify-content: center;
-    width: 80%;
-}
 
 #perfil{
-    /* display: grid;
-    grid-template-columns: 300px auto;
-    gap: 70px; */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 100px;
+    overflow: hidden;
 }
 
 #photo-perfil{
     display: flex;
     position: relative;
-    width: 270px;
-    height: 320px;
-    border: 10px solid  var(--color-padrao);
-    border-radius: 5px;
+    /* width: 270px;
+    height: 320px; */
+    /* border: 10px solid  var(--color-padrao); */
+    /* border-radius: 5px; */
     left: 30px;
     background-color: var(--color-padrao);
     margin-top: 12px;
@@ -253,6 +242,7 @@ section{
 }
 
 #photo-perfil img{
+    border: 5px solid var(--color-padrao);
     width: 250px;
     height: 300px;
     overflow: hidden;
@@ -260,16 +250,27 @@ section{
 
 #info-perfil{
     display: flex;
-    width: 70%;
-    align-items: center;
-    border: 1px solid black;
+    flex-direction: column;
+    width: 60%;
+    justify-content: space-around;
+    /* border: 1px solid black; */
     /* margin-right: 20px; */
 }
 
 #info-perfil p{
-    /* margin: 10px; */
     text-align: justify;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+}
+
+#info-perfil a{
+    color: var(--color-padrao);
+    text-decoration: underline;
+    transition: all 250ms ease-in-out;
+}
+
+#info-perfil a:hover{
+    color: rgb(243, 235, 235);
+    text-decoration: underline;
 }
 
 .titulo-back-blue{
@@ -290,6 +291,14 @@ section{
     text-align: center;
 }
 
+#contato span{
+    font-size: 1rem;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    text-align: center;
+}
+
+
 .form{
     display: flex;
     flex-direction: column;
@@ -305,15 +314,21 @@ section{
 
 .form div input{
     width: 400px;
-    height: 30px;
+    height: 40px;
     border: none;
     border-radius: 7px;
     padding: 10px;
 }
 
-.form label{
+/* .form label{
     margin-right: 10px;
     font-size: 1.2rem;
+} */
+
+::-webkit-input-placeholder{
+    font-size: 1.2rem;
+    font-family: 'Nunito', sans-serif;
+    color: rgba(0, 0, 0, 0.747);
 }
 
 .form .msg{
@@ -347,4 +362,9 @@ section{
     border: solid 1px white;
     color: white;
     cursor: pointer;
+}
+
+.no-scroll{
+    overflow: hidden;
+    position: fixed;
 }
