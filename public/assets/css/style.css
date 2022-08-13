@@ -28,6 +28,7 @@ ul{
 
 section{
     min-height: 100vh;
+    padding-top: 70px;
 }
 
 #cabecalho{
@@ -213,10 +214,9 @@ section{
 }
 
 #sobre{
-    background-color: #007DEB;
     background-color: pink;
     color: var(--color-padrao);
-    padding-top: 40px;
+    padding-top: 70px;
     min-width: 100%;
 }
 
@@ -224,21 +224,22 @@ section{
 #perfil{
     display: flex;
     justify-content: center;
-    gap: 100px;
+    gap: 50px;
+    flex-wrap: wrap;
     overflow: hidden;
 }
 
-#photo-perfil{
-    display: flex;
-    position: relative;
+#photo-perfil img{
+    /* display: flex; */
+    /* position: relative; */
     /* width: 270px;
     height: 320px; */
     /* border: 10px solid  var(--color-padrao); */
     /* border-radius: 5px; */
-    left: 30px;
+    /* left: 30px; */
     background-color: var(--color-padrao);
-    margin-top: 12px;
-    justify-content: center;
+    /* margin-top: 12px; */
+    /* justify-content: center; */
 }
 
 #photo-perfil img{
@@ -260,6 +261,8 @@ section{
 #info-perfil p{
     text-align: justify;
     font-size: 1.4rem;
+    /* font-family: 'Nunito', sans-serif; */
+    font-family: 'Slabo 27px', serif;
 }
 
 #info-perfil a{
@@ -273,19 +276,36 @@ section{
     text-decoration: underline;
 }
 
-.titulo-back-blue{
+#rede-social{
     margin-top: 40px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+#rede-social div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#rede-social div span{
+    font-family: 'Slabo 27px', serif;
+}
+
+.titulo-back-blue{
     margin-bottom: 50px;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-family: 'Comfortaa', cursive;
     color: white;
     text-align: center;
 }
 
 
-.titulo-back-white{
+.titulo-back-pink{
     margin-bottom: 50px;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-family: 'Comfortaa', cursive;
     color: var(--color-padrao);
     text-align: center;

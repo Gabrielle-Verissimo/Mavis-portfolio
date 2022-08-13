@@ -1,3 +1,3 @@
-import loadImg from '../../images.js'
+import loadImg from './assets/modules/images.js'
 
 loadImg();
