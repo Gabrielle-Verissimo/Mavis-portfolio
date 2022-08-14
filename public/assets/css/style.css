@@ -386,5 +386,9 @@ section{
 
 .no-scroll{
     overflow: hidden;
-    position: fixed;
+}
+
+.dale{
+    width: 10%;
+    height: 10%;
 }

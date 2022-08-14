@@ -1,6 +1,6 @@
 import { images } from './bancoImg.js'
 const container = document.querySelector('#container-img');
-
+let imgWidth;
 export default function loadImg(){
     images.forEach(item => {
         const div = document.createElement('div');
@@ -21,11 +21,9 @@ function openModal(e){
     const info = document.createElement('div');
     const areaImg = document.createElement('div');
     const a = document.createElement('a');
-    const img = document.createElement('img');
+    const img = document.createElement('img'); 
     const body = document.querySelector('body');
     const btnClose = document.createElement('span');
-    console.log(urlImg.width);
-
     let description;
     
     images.forEach(item => {
@@ -40,6 +38,11 @@ function openModal(e){
     a.setAttribute('href', urlImg);
     a.setAttribute('target', 'blank');
     img.setAttribute('src', urlImg);
+    img.onload = () => {
+        if(img.clientWidth < 550){
+            img.classList.add('dale');
+        }
+    };
     a.appendChild(img);
     background.classList = 'backModal';
     modal.classList = 'modal';
