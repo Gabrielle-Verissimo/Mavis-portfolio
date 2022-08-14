@@ -1,3 +1,3 @@
 # Mavis-portfolio
 
-Para as configurações da area "Contato" funcionarem é necessário criar um arquivo .env
+Para as configurações da area "Contato" funcionarem é necessário criar um arquivo
