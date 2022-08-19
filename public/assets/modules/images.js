@@ -1,6 +1,6 @@
 import { images } from './bancoImg.js'
 const container = document.querySelector('#container-img');
-let imgWidth;
+
 export default function loadImg(){
     images.forEach(item => {
         const div = document.createElement('div');
@@ -34,21 +34,30 @@ function openModal(e){
     })
 
     btnClose.classList = 'btn-close';
-    btnClose.innerHTML = '<i class="fas fa-times"></i>';
+    btnClose.innerHTML = '<i class="fas fa-times"></i>'; //
     a.setAttribute('href', urlImg);
     a.setAttribute('target', 'blank');
     img.setAttribute('src', urlImg);
-    img.onload = () => {
-        if(img.clientWidth < 550){
-            img.classList.add('dale');
-        }
-    };
     a.appendChild(img);
     background.classList = 'backModal';
     modal.classList = 'modal';
     info.classList = 'info';
     info.innerHTML = description;
+    info.onload = () => {
+        console.log(info.clientWidth);
+    }
     areaImg.classList = 'imgModal';
+    img.onload = () => {
+        if(img.clientWidth < 550 || img.clientHeight < 450){
+            areaImg.classList.add('imgModal-small-img');
+        }
+        if(img.clientWidth > 620){
+            areaImg.classList.add('imgModal-large-img');
+        }
+        // if(img.clientHeight > ){
+        //     areaImg.classList.add('imgModal-short-img');
+        // }
+    };
     areaImg.appendChild(a);
     modal.appendChild(areaImg);
     modal.appendChild(info);

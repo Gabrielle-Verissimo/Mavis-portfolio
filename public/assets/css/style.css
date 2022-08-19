@@ -52,6 +52,10 @@ section{
     font-family: 'Comfortaa', cursive;
 }
 
+#cabecalho a{
+    color: var(--color-padrao);
+}
+
 #menu ul{ 
     display: flex;
     flex-direction: row;
@@ -66,7 +70,7 @@ section{
 }
 
 #menu ul li a{
-    color: inherit;
+    color: var(--color-padrao);
     padding: 5px 10px;
     border-radius: 7px;
     /* font-family: 'Slabo 27px', serif; */
@@ -111,8 +115,6 @@ section{
 .img{
     width: 275px;
     height: 275px;
-    /* height: 40vh; */
-    /* background-color: white; */
     padding: 0px;
     border: solid 10px white;
     border-radius: 5px;
@@ -146,7 +148,8 @@ section{
     grid-template-areas: 
     'image image image info info button'
     'image image image info info button';
-    gap: 10px;
+    gap: 5px;
+    justify-content: space-between;
     background-color: white;
     z-index: 2;
     width: 75%;
@@ -180,12 +183,29 @@ section{
 
 .imgModal{
     grid-area: image;
-    /* grid-column: 1 / 4; */
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
 
+.imgModal-large-img{
+    /* grid-area: image; */
+    width: 620px;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+.imgModal-small-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* grid-area: image; */
+    background-color: black;
+    /* width: 100%;
+    height: 100%;
+    overflow: hidden; */
+}
+/* .imgModal-short-img */
 .btn-close{
     display: flex;
     justify-content: center;
@@ -198,6 +218,7 @@ section{
     margin-right: 7px;
     margin-top: 7px;
     padding: 12px;
+    padding-top: 14px;
     border-radius: 5px;
     z-index: 2;
     cursor: pointer;
@@ -386,9 +407,4 @@ section{
 
 .no-scroll{
     overflow: hidden;
-}
-
-.dale{
-    width: 10%;
-    height: 10%;
 }
