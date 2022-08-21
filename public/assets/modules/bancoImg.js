@@ -4,7 +4,12 @@ export const images = [
     {name: 'bebida', description: `<h1>Social Midia</h1>
     <p>Arte feita para postagem em redes sociais como forma de divulgação<p>`},
     {name: 'mapa', description: `<h1>Mapa de mudança de Localização</h1>
-    <span>(Ilustrações por Freepik)</span>`},
+    <span>(Ilustrações por Freepik)</span>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eros lacus, varius quis lacus eget, 
+    feugiat viverra lectus. Vivamus at mi orci. Ut magna tortor, aliquet ac libero vel, cursus gravida lectus. 
+    Nunc fermentum, nulla quis consectetur accumsan, sapien augue bibendum ex, vitae sollicitudin turpis lacus dignissim sapien. 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac maximus purus. Morbi luctus commodo faucibus
+    <p>`},
     {name: 'mavis-avatar', description: `<h1>Descrição de mavis-avatar</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eros lacus, varius quis lacus eget, 
     feugiat viverra lectus. Vivamus at mi orci. Ut magna tortor, aliquet ac libero vel, cursus gravida lectus. 

@@ -146,8 +146,8 @@ section{
     /* grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); */
     /* grid-template-columns: auto auto auto auto auto; */
     grid-template-areas: 
-    'image image image info info button'
-    'image image image info info button';
+    'image image info info button'
+    'image image info info button';
     gap: 5px;
     justify-content: space-between;
     background-color: white;
@@ -190,7 +190,7 @@ section{
 
 .imgModal-large-img{
     /* grid-area: image; */
-    width: 620px;
+    width: 500px;
     height: 100%;
     /* overflow: hidden; */
 }
@@ -224,15 +224,22 @@ section{
     cursor: pointer;
 }
 
-.btn-close:hover{
-    background-color: rgba(0, 0, 0, 0.053);;
+.btn-close i{
+    transition: all 250ms ease-in-out;
+    border-radius: 5px;
+    padding: 4px 7px;
 }
 
-.btn-close2{
+.btn-close i:hover{
+    background-color: rgba(0, 0, 0, 0.053);
+
+}
+
+/* .btn-close2{
     background-color: white;
     width: 200px;
     height: 200px;  
-}
+} */
 
 #sobre{
     background-color: pink;
