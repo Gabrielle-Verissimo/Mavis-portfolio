@@ -7,7 +7,14 @@ const engine = require('consolidate');
 const nodemailer = require('nodemailer');
 const session = require('express-session');
 const flash = require('connect-flash');
+const csrf = require('csurf');
 
+// app.use((req, res, next) => {
+//     res.locals.csrfToken = req.csrfToken();
+//     next();
+// });
+
+// app.use(csrf());
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'public')));

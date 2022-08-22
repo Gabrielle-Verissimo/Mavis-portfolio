@@ -84,6 +84,7 @@
         </h1>
 
         <form class="form" action="/send-message" method="POST">
+            <input type="hidden" name="_csrf" value={{csrfToken}}>
             <div>
                 <!-- <label>Nome:</label> <br> -->
                 <input type="text" name="name" placeholder="Nome">

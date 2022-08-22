@@ -44,7 +44,7 @@
     
 }
 
-@media (max-width: 860px){
+@media (max-width: 850px){
         .modal{
         display: grid;
         grid-template-areas: 
@@ -114,6 +114,26 @@
     
     }
 }
+
+@media (max-width: 520px){
+    .backModal{
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: 1;
+        display: grid;
+        grid-template-areas: 
+        'button'
+        'image'
+        'info';
+        /* gap: 5px; */
+        justify-content: space-between;
+        background-color: white;
+        overflow: hidden;
+    }
+}
+
 /* 
 .imgModal{
     grid-area: image;

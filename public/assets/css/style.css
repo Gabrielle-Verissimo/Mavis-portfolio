@@ -205,7 +205,6 @@ section{
     height: 100%;
     overflow: hidden; */
 }
-/* .imgModal-short-img */
 .btn-close{
     display: flex;
     justify-content: center;
@@ -255,19 +254,6 @@ section{
     gap: 50px;
     flex-wrap: wrap;
     overflow: hidden;
-}
-
-#photo-perfil img{
-    /* display: flex; */
-    /* position: relative; */
-    /* width: 270px;
-    height: 320px; */
-    /* border: 10px solid  var(--color-padrao); */
-    /* border-radius: 5px; */
-    /* left: 30px; */
-    background-color: var(--color-padrao);
-    /* margin-top: 12px; */
-    /* justify-content: center; */
 }
 
 #photo-perfil img{
