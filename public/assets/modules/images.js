@@ -43,9 +43,6 @@ function openModal(e){
     modal.classList = 'modal';
     info.classList = 'info';
     info.innerHTML = description;
-    info.onload = () => {
-        console.log(info.clientWidth);
-    }
     areaImg.classList = 'imgModal';
     img.onload = () => {
         if(img.clientWidth < 550 || img.clientHeight < 450){
@@ -54,22 +51,26 @@ function openModal(e){
         if(img.clientWidth > 620){
             areaImg.classList.add('imgModal-large-img');
         }
+        if(window.innerWidth <= 850){
+            areaImg.classList.add('imgModal-small-img');
+        }
     };
-    if(window.innerWidth <= 850){
-        areaImg.classList.add('imgModal-small-img');
-    }
+
     areaImg.appendChild(a);
     modal.appendChild(areaImg);
     modal.appendChild(info);
     modal.appendChild(btnClose);
     background.appendChild(modal);
     body.appendChild(background);
-    if(window.innerWidth <= 520){
-        modal.parentNode.removeChild(modal);
-        background.appendChild(areaImg);
-        background.appendChild(info);
-        background.appendChild(btnClose);
-    }
+    // if(window.innerWidth <= 520){
+    //     console.log('entrou');
+    //     modal.parentNode.removeChild(modal);
+    //     background.appendChild(areaImg);
+    //     background.appendChild(info);
+    //     background.appendChild(btnClose);
+    //     areaImg.classList.remove('imgModal-large-img');
+    //     areaImg.classList.remove('imgModal-small-img');
+    // }
     body.classList.add('no-scroll');
     btnClose.addEventListener('click', closeModal);
 }
@@ -80,4 +81,8 @@ function closeModal(e){
     body.classList.remove('no-scroll');
     background.parentNode.removeChild(background);
     
+}
+
+function openMenu{
+    const btn = document.querySelector('#menu::after');
 }
