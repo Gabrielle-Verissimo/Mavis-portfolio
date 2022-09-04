@@ -62,15 +62,6 @@ function openModal(e){
     modal.appendChild(btnClose);
     background.appendChild(modal);
     body.appendChild(background);
-    // if(window.innerWidth <= 520){
-    //     console.log('entrou');
-    //     modal.parentNode.removeChild(modal);
-    //     background.appendChild(areaImg);
-    //     background.appendChild(info);
-    //     background.appendChild(btnClose);
-    //     areaImg.classList.remove('imgModal-large-img');
-    //     areaImg.classList.remove('imgModal-small-img');
-    // }
     body.classList.add('no-scroll');
     btnClose.addEventListener('click', closeModal);
 }
@@ -81,8 +72,4 @@ function closeModal(e){
     body.classList.remove('no-scroll');
     background.parentNode.removeChild(background);
     
-}
-
-function openMenu{
-    const btn = document.querySelector('#menu::after');
 }

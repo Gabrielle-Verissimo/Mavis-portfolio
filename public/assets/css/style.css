@@ -100,6 +100,42 @@ section{
     left: 25%;
 }
 
+#menu-open{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* z-index: 2; */
+    background-color: white;
+    right: 25px;
+    /* border: solid 1px; */
+    height: 125px;
+    width: 150px;
+}
+
+.animation-btn-menu{
+    animation: btn-menu 0.3s linear forwards;
+}
+
+.animation-menu-open{
+    animation: menu-open 0.3s linear forwards;
+}
+
+@keyframes btn-menu{
+    25% {transform: rotate(25deg);}
+    50% {transform: rotate(50deg);}
+    75% {transform: rotate(75deg);}
+    100% {transform: rotate(90deg);}
+}
+
+@keyframes menu-open{
+    25% {display: none;}
+    50% {display: none;}
+    75% {display: none;}
+    100% {display: none; background-color: red;}
+}
+
 .menu-spacing {
     height: 55px;
 }
@@ -116,6 +152,7 @@ section{
     width: 275px;
     height: 275px;
     padding: 0px;
+    margin: 10px;
     border: solid 10px white;
     border-radius: 5px;
     margin-bottom: 50px;
@@ -211,13 +248,12 @@ section{
     align-items: center;
     color: rgba(0, 0, 0, 0.205);
     grid-area: button;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     height: 1.5rem;
     width: 1.5rem;
     margin-right: 7px;
     margin-top: 7px;
-    padding: 12px;
-    padding-top: 14px;
+    padding: 12px 0;
     border-radius: 5px;
     z-index: 2;
     cursor: pointer;
@@ -400,4 +436,12 @@ section{
 
 .no-scroll{
     overflow: hidden;
+}
+
+/* .visibility{
+    display: none;
+} */
+
+#btn-menu{
+    display: none;
 }
