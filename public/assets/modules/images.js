@@ -66,7 +66,7 @@ function openModal(e){
     btnClose.addEventListener('click', closeModal);
 }
 
-function closeModal(e){
+function closeModal(){ //se der erro colocar o 'e'
     const background = document.querySelector('.backModal');
     const body = document.querySelector('body');
     body.classList.remove('no-scroll');

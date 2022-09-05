@@ -1,5 +1,5 @@
 import loadImg from './assets/modules/images.js';
-import openMenu from './assets/modules/menu.js';
+import menuHandler from './assets/modules/menu.js';
 
-openMenu();
+menuHandler();
 loadImg();
