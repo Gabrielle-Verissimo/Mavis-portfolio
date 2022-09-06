@@ -224,6 +224,48 @@
     #menu ul{
         display: none;
     }
+
+    #responsive-menu{
+        display: flex;
+        flex-direction: row;
+        margin-right: 50px;
+    }
+
+    #responsive-menu li{
+        margin: 0 5px;
+        position: relative;
+        transition: all 300ms ease-in-out;
+    }
+    
+    #responsive-menu li a{
+        color: var(--color-padrao);
+        padding: 5px 10px;
+        border-radius: 7px;
+        font-family: 'Nunito', sans-serif;
+        font-weight: bolder;
+        font-size: 1.2rem;
+        transition: all 300ms ease-in-out;
+    }
+    
+    #responsive-menu li a:hover{
+        background-color: rgba(0, 0, 0, 0.053);
+    }
+    
+    #responsive-menu li a::after {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: rgb(0, 23, 43);; 
+        transition: all 300ms ease-in-out;
+    }
+      
+    #responsive-menu li a:hover::after {
+        width: 50%;
+        left: 25%;
+    }
 }
 
 /* .backModal{

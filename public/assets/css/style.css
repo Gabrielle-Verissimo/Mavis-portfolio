@@ -13,7 +13,6 @@
 html {
     scroll-behavior: smooth;
     background: var(--color-padrao);
-    /* background-image: url('../../img/background.svg'); */
     background-size: cover;
     background-attachment: fixed;
   }
@@ -64,7 +63,6 @@ section{
 
 #menu ul li{
     margin: 0 5px;
-    /* background-color: aliceblue; */
     position: relative;
     transition: all 300ms ease-in-out;
 }
@@ -73,7 +71,6 @@ section{
     color: var(--color-padrao);
     padding: 5px 10px;
     border-radius: 7px;
-    /* font-family: 'Slabo 27px', serif; */
     font-family: 'Nunito', sans-serif;
     font-weight: bolder;
     font-size: 1.2rem;
@@ -143,9 +140,6 @@ section{
 
 .modal{
     display: grid;
-    /* grid-template-areas: 'image image image image info button'; */
-    /* grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); */
-    /* grid-template-columns: auto auto auto auto auto; */
     grid-template-areas: 
     'image image info info button'
     'image image info info button';
@@ -190,21 +184,15 @@ section{
 }
 
 .imgModal-large-img{
-    /* grid-area: image; */
     width: 500px;
     height: 100%;
-    /* overflow: hidden; */
 }
 
 .imgModal-small-img{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* grid-area: image; */
     background-color: black;
-    /* width: 100%;
-    height: 100%;
-    overflow: hidden; */
 }
 .btn-close{
     display: flex;
@@ -234,12 +222,6 @@ section{
 
 }
 
-/* .btn-close2{
-    background-color: white;
-    width: 200px;
-    height: 200px;  
-} */
-
 #sobre{
     background-color: pink;
     color: var(--color-padrao);
@@ -268,14 +250,11 @@ section{
     flex-direction: column;
     width: 60%;
     justify-content: space-around;
-    /* border: 1px solid black; */
-    /* margin-right: 20px; */
 }
 
 #info-perfil p{
     text-align: justify;
     font-size: 1.4rem;
-    /* font-family: 'Nunito', sans-serif; */
     font-family: 'Slabo 27px', serif;
 }
 
@@ -292,7 +271,6 @@ section{
 
 #rede-social{
     margin-top: 40px;
-    /* border: 1px solid black; */
     display: flex;
     justify-content: center;
     gap: 50px;
@@ -354,11 +332,6 @@ section{
     padding: 10px;
 }
 
-/* .form label{
-    margin-right: 10px;
-    font-size: 1.2rem;
-} */
-
 ::-webkit-input-placeholder{
     font-size: 1.2rem;
     font-family: 'Nunito', sans-serif;
@@ -373,11 +346,6 @@ section{
     padding: 10px;
     resize: none;
 }
-
-/* .form .container-msg{
-    display: flex;
-    align-items: center;
-} */
 
 .form .btn-send{
     border: none;
@@ -402,14 +370,18 @@ section{
     overflow: hidden;
 }
 
-/* .visibility{
-    display: none;
-} */
+.visibility{
+    display: flex;
+}
 
 #btn-menu{
     display: none;
 }
 
 #check-menu{
+    display: none;
+}
+
+.animation-menu-open{
     display: none;
 }
