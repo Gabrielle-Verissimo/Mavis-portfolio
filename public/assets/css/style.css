@@ -55,19 +55,19 @@ section{
     color: var(--color-padrao);
 }
 
-#menu ul{ 
+#menu{ 
     display: flex;
     flex-direction: row;
     margin-right: 50px;
 }   
 
-#menu ul li{
+#menu li{
     margin: 0 5px;
     position: relative;
     transition: all 300ms ease-in-out;
 }
 
-#menu ul li a{
+#menu li a{
     color: var(--color-padrao);
     padding: 5px 10px;
     border-radius: 7px;
@@ -77,11 +77,11 @@ section{
     transition: all 300ms ease-in-out;
 }
 
-#menu ul li a:hover{
+#menu li a:hover{
     background-color: rgba(0, 0, 0, 0.053);
 }
 
-#menu ul li a::after {
+#menu li a::after {
     content: '';
     position: absolute;
     bottom: 0px;
@@ -92,7 +92,7 @@ section{
     transition: all 300ms ease-in-out;
 }
   
-#menu ul li a:hover::after {
+#menu li a:hover::after {
     width: 50%;
     left: 25%;
 }
@@ -370,17 +370,17 @@ section{
     overflow: hidden;
 }
 
-.visibility{
-    display: flex;
-}
-
 #btn-menu{
     display: none;
 }
 
-#check-menu{
-    display: none;
+/* .animation-btn-menu{
+    animation-play-state: paused;
 }
+
+.animation-btn-menu-close{
+    animation-play-state: paused;
+} */
 
 .animation-menu-open{
     display: none;

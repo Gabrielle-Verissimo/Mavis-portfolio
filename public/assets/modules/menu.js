@@ -1,9 +1,10 @@
 const btnMenu = document.querySelector('#btn-menu');
-const menu = document.querySelector('#menu');
+const containerMenu = document.querySelector('#container-menu');
+
 let checked = false;
 export default function menuHandler(){
     if(checked){
-        close(open());
+        close();
         checked = false;
     }
     else{
@@ -15,18 +16,15 @@ export default function menuHandler(){
 function open(){
     const menuOpen = createMenu();
     btnMenu.classList = 'animation-btn-menu';
-    menuOpen.classList = 'animation-menu-open';
-    menuOpen.setAttribute('id', 'menu-open');
-    menuOpen.appendChild(ul);
-    menu.appendChild(menuOpen);
-    return menuOpen;
+    containerMenu.appendChild(menuOpen);
 }
 
-function close(menuOpen){
-    console.log(menuOpen)
+function close(){
+    const menuOpen = document.querySelector('#menu-open');
     btnMenu.classList = 'animation-btn-menu-close';
     menuOpen.parentNode.removeChild(menuOpen);
 }
+
 
 function createMenu(){
     const menuOpen = document.createElement('div');
@@ -42,6 +40,8 @@ function createMenu(){
         li.appendChild(a);
         ul.appendChild(li);
     }
-
+    menuOpen.classList = 'animation-menu-open';
+    menuOpen.setAttribute('id', 'menu-open');
+    menuOpen.appendChild(ul);
     return menuOpen;
 }
