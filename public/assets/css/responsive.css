@@ -47,6 +47,16 @@
     
 }
 
+@media (max-width: 900px){
+    #perfil{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+}
+
 @media (max-width: 850px){
     .modal{
         display: grid;
@@ -115,6 +125,17 @@
     .btn-close i:hover{
         background-color: rgba(0, 0, 0, 0.053);
     
+    }
+}
+
+@media (max-width: 780px){
+    #info-perfil{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-right: 20px;
+        width: 60%;
+        justify-content: space-around;
     }
 }
 
@@ -211,12 +232,6 @@
         display: none;
     }
 
-    /* #responsive-menu{
-        display: flex;
-        flex-direction: column;
-        margin-right: 50px;
-    } */
-
     #responsive-menu li{
         margin: 7px;
         position: relative;
@@ -252,41 +267,62 @@
         width: 50%;
         left: 25%;
     }
+
+    #contato span{
+        font-size: 1rem;
+        font-family: 'Comfortaa', cursive;
+        color: white;
+        text-align: center;
+        margin: 0 25px;
+    }
 }
 
-/* .backModal{
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    z-index: 1;
-    display: grid;
-    grid-template-areas: 
-    'button'
-    'image'
-    'info';
-    gap: 5px;
-    justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.048);
-    overflow: hidden;
-} */
+@media (max-width: 450px){
+    #perfil{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        overflow: hidden;
+        width: 100%;
+    }
 
-/* 
-.imgModal{
-    grid-area: image;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    #info-perfil{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        overflow: hidden;
+    }
+    
+    #info-perfil p{
+        text-align: justify;
+        font-size: 5vw;
+        width: max(90vw, 300px);
+        font-family: 'Slabo 27px', serif;
+    }
+
+    #rede-social span{
+        margin-bottom: 30px;
+    }
+
+    .form div input{
+        width: 300px;
+        height: 40px;
+        border: none;
+        border-radius: 7px;
+        padding: 10px;
+    }
+
+    .form .msg{
+        width: 300px;
+        height: 150px;
+        border: none;
+        border-radius: 7px;
+        padding: 10px;
+        resize: none;
+    }
 }
-
-.imgModal-large-img{
-    width: 500px;
-    height: 100%;
-}
-
-.imgModal-small-img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-} */

@@ -25,7 +25,6 @@ function close(){
     menuOpen.parentNode.removeChild(menuOpen);
 }
 
-
 function createMenu(){
     const menuOpen = document.createElement('div');
     const ul = document.createElement('ul');

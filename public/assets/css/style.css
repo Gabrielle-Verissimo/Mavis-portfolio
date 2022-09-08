@@ -248,14 +248,35 @@ section{
 #info-perfil{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     width: 60%;
     justify-content: space-around;
 }
 
 #info-perfil p{
+    display: flex;
     text-align: justify;
     font-size: 1.4rem;
     font-family: 'Slabo 27px', serif;
+}
+
+#btn-works{
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+    background-color: var(--color-padrao);
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 350ms ease-in-out;
+}
+
+#btn-works:hover{
+    background-color: white;
+    border: solid 1px var(--color-padrao);
+    color: var(--color-padrao);
+    cursor: pointer;
 }
 
 #info-perfil a{
