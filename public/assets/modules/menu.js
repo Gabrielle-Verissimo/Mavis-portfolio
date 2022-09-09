@@ -13,12 +13,6 @@ export default function menuHandler(){
     }
 }
 
-function open(){
-    const menuOpen = createMenu();
-    btnMenu.classList = 'animation-btn-menu';
-    containerMenu.appendChild(menuOpen);
-}
-
 function close(){
     const menuOpen = document.querySelector('#menu-open');
     btnMenu.classList = 'animation-btn-menu-close';
@@ -44,3 +38,22 @@ function createMenu(){
     menuOpen.appendChild(ul);
     return menuOpen;
 }
+
+function open(){
+    const menuOpen = createMenu();
+    btnMenu.classList = 'animation-btn-menu';
+    containerMenu.appendChild(menuOpen);
+    optionClicked();
+}
+
+function optionClicked(){
+    const ul = document.querySelector('#responsive-menu');
+    const arrayLi = ul.children;
+    for(let i = 0; i < 3; i++){
+        arrayLi[i].firstChild.addEventListener('click', () => {
+            close();
+            checked = false;
+        })
+    }
+}
+

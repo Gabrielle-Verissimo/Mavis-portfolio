@@ -87,17 +87,14 @@
         <form class="form" action="/send-message" method="POST">
             <input type="hidden" name="_csrf" value={{csrfToken}}>
             <div>
-                <!-- <label>Nome:</label> <br> -->
                 <input type="text" name="name" placeholder="Nome">
             </div>
            
             <div>
-                <!-- <label for="">Email:</label> <br> -->
                 <input type="email" name="email" placeholder="Email">
             </div>
             <br>
             <div class="container-msg">
-                <!-- <label>Mensagem:</label> <br> -->
                 <textarea name="message" id="" cols="30" rows="10" class="msg" placeholder="Mensagem"></textarea>
             </div>
 
