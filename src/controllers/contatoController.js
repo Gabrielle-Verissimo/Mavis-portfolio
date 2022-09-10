@@ -1,4 +1,4 @@
-const validator = require('validator');
+const nodemailer = require('nodemailer');
 
 exports.sendMessage = async (req, res) => {
     try{
@@ -20,13 +20,16 @@ exports.sendMessage = async (req, res) => {
         }
 
         transporter.sendMail(message);
-        if(!req.body.name || !req.body.email || (req.body.email && !validator.isEmail(req.body.email))|| !req.body.message){
-            req.flash('errors', 'Preencha todos os campos');
-        }
-        else{
-            req.flash('success', 'Mensagem enviada com sucesso');
-        }
+        // if(!req.body.name || !req.body.email || (req.body.email && !validator.isEmail(req.body.email))|| !req.body.message){
+        //     req.flash('errors', 'Preencha todos os campos');
+        // }
+        // else{
+        //     req.flash('success', 'Mensagem enviada com sucesso');
+        // }
         return res.redirect('/#contato');
     }
-    catch(e){ console.log(e) }
+    catch(e){ 
+        console.log(e);
+        res.render('404'); 
+    }
 }
