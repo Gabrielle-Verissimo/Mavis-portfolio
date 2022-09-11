@@ -359,7 +359,7 @@ section{
     color: rgba(0, 0, 0, 0.747);
 }
 
-.form .msg{
+.form #msg{
     width: 400px;
     height: 150px;
     border: none;
@@ -395,14 +395,14 @@ section{
     display: none;
 }
 
-/* .animation-btn-menu{
-    animation-play-state: paused;
-}
-
-.animation-btn-menu-close{
-    animation-play-state: paused;
-} */
-
 .animation-menu-open{
     display: none;
+}
+
+.error{
+    border: 2px solid rgba(248, 1, 34, 0.548) !important;
+}
+
+.error-message{
+    color: rgb(221, 55, 55);
 }
