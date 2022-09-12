@@ -404,5 +404,5 @@ section{
 }
 
 .error-message{
-    color: rgb(221, 55, 55);
+    color: rgb(221, 55, 55) !important;
 }
