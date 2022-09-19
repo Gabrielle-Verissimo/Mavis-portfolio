@@ -2,72 +2,117 @@ const form = document.querySelector('.form');
 const name = document.querySelector('input[name="name"]');
 const email = document.querySelector('input[name="email"]');
 const message = document.querySelector('#msg');
+const btn = form.querySelector('.btn-send');
+let errorCounter = 0;
 
 export default function initValidator(){
     form.addEventListener('submit', e => {
         e.preventDefault();
-        formValidator(e);
+        formValidator();
     });
 }
 
-function formValidator(e){
-    let error = 'Preenchimento de campo obrigatório';
+function formValidator(){
+    let stringError = 'Preenchimento de campo obrigatório';
     if(!name.value){
+        errorCounter++;
         name.classList.add('error');
-        (messageError(error, name));
+        (errorMessage(stringError, name));
     }
     if(name.value && (name.value.length < 4)){
+        errorCounter++;
         name.classList.add('error');
-        (messageError('Nome deve conter mais que 3 letras', name));
+        (errorMessage('Nome deve conter mais que 3 letras', name));
     }
     if(!email.value){
+        errorCounter++;
         email.classList.add('error');
-        messageError(error, email);
+        errorMessage(stringError, email);
     }
     if(email.value && !isEmail(email.value)){
+        errorCounter++;
         email.classList.add('error');
-        messageError('Insira um email válido', email);
+        errorMessage('Insira um email válido', email);
     }
     if(!message.value){
+        errorCounter++;
         message.classList.add('error');
-        messageError(error, message);
+        errorMessage(stringError, message);
     }
-
-    e.target.addEventListener('change', changeValidator());
+    console.log(errorCounter)
+    if(errorCounter != 0){
+        changeValidator();
+    }
+    else{successMessage()}
 }
-//adicionar um evendo de click no botao enviar dentro de uma verificação se ainda existe erro
+
 function changeValidator(){
-    if(name.value){
-        name.classList.remove('error');
-        removeMessageError(name);
-    }
-    if(email.value){
-        email.classList.remove('error');
-        removeMessageError(email);
-    }
-    if(email.value && isEmail(email)){
-        email.classList.remove('error');
-        removeMessageError(email);
-    }
-    if(message.value){
-        message.classList.remove('error');
-        removeMessageError(message);
-    }
+    btn.addEventListener('click', () => {
+        console.log('entrou');
+        if(errorCounter != 0){
+            if(name.value){
+                name.classList.remove('error');
+                removeErrorMessage(name);
+            }
+            if(email.value){
+                email.classList.remove('error');
+                removeErrorMessage(email);
+            }
+            if(email.value && isEmail(email)){
+                email.classList.remove('error');
+                removeErrorMessage(email);
+            }
+            if(message.value){
+                message.classList.remove('error');
+                removeErrorMessage(message);
+            }
+            if(errorCounter != 0){
+                removeErrorMessage(name);
+                removeErrorMessage(email);
+                removeErrorMessage(message);
+            }      
+        }
+    });
+
 }
 
-function removeMessageError(input){
+function removeErrorMessage(input){
     const span = input.parentNode.querySelector('span');
+    if(span){
+        input.parentNode.removeChild(span);
+        errorCounter--;
+    }
     console.log(input.parentNode)
-    input.parentNode.removeChild(span);
 };
 
-function messageError(error, input){
+function errorMessage(stringError, input){
     const inputParent = input.parentNode;
     const span = document.createElement('span');
     span.classList = 'error-message';
-    span.innerHTML = error;
+    span.innerHTML = stringError;
     inputParent.appendChild(span);
 }
+
+function successMessage(){
+    let formFields = [name, email, message];
+    const span = document.createElement('span');
+    for(let i = 0; i < formFields.length; i++){
+        formFields[i].value = null;
+    }
+    span.classList = 'success-message';
+    span.innerHTML = 'Mensagem enviada com sucesso!';
+    form.appendChild(span);
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  
+console.log("Hello");
+sleep(2000).then(() => {
+    const successMessage = document.querySelector('.success-message');
+    const parent = successMessage.parentNode
+});
 
 function isEmail(email){
     let pattern = /.*@[^0-9.][a-z]*\..*/g;

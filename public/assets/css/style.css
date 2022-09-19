@@ -404,5 +404,15 @@ section{
 }
 
 .error-message{
+    display: block;
+    margin-top: 5px;
     color: rgb(221, 55, 55) !important;
+}
+
+.success-message{
+    display: block;
+    margin-top: 7px;
+    background-color: green;
+    border-radius: 7px;
+    padding: 10px;
 }
