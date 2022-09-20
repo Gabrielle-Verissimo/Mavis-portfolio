@@ -39,16 +39,19 @@ function formValidator(){
         message.classList.add('error');
         errorMessage(stringError, message);
     }
-    console.log(errorCounter)
+
     if(errorCounter != 0){
         changeValidator();
     }
-    else{successMessage()}
+    else{
+        //successMessage();
+        form.submit();
+        //sleep().then(() =>successMessage());
+    }
 }
 
 function changeValidator(){
     btn.addEventListener('click', () => {
-        console.log('entrou');
         if(errorCounter != 0){
             if(name.value){
                 name.classList.remove('error');
@@ -82,7 +85,6 @@ function removeErrorMessage(input){
         input.parentNode.removeChild(span);
         errorCounter--;
     }
-    console.log(input.parentNode)
 };
 
 function errorMessage(stringError, input){
@@ -93,26 +95,23 @@ function errorMessage(stringError, input){
     inputParent.appendChild(span);
 }
 
-function successMessage(){
-    let formFields = [name, email, message];
-    const span = document.createElement('span');
-    for(let i = 0; i < formFields.length; i++){
-        formFields[i].value = null;
-    }
-    span.classList = 'success-message';
-    span.innerHTML = 'Mensagem enviada com sucesso!';
-    form.appendChild(span);
+// function successMessage(){
+//     let formFields = [name, email, message];
+//     const span = document.createElement('span');
+//     for(let i = 0; i < formFields.length; i++){
+//         formFields[i].value = null;
+//     }
+//     span.classList = 'success-message';
+//     span.innerHTML = 'Mensagem enviada com sucesso!';
+//     form.appendChild(span);
+
+//     //sleep().then(() => span.parentNode.removeChild(span));
+// }
+
+function sleep() {
+    return new Promise(resolve => setTimeout(resolve, 5000));
 }
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-  
-console.log("Hello");
-sleep(2000).then(() => {
-    const successMessage = document.querySelector('.success-message');
-    const parent = successMessage.parentNode
-});
 
 function isEmail(email){
     let pattern = /.*@[^0-9.][a-z]*\..*/g;
