@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer');
+const Contato = require('../models/Contato');
 exports.sendMessage = async (req, res) => {
     try{
         const transporter = nodemailer.createTransport({
@@ -18,6 +19,11 @@ exports.sendMessage = async (req, res) => {
             html: `<p>${req.body.message}</p>`
         }
 
+        const contato = new Contato(req.body);
+        contato.validator();
+        if(contato.errors.length > 0){
+            return res.redirect('/#contato');
+        }
         transporter.sendMail(message);
 
         // else{
@@ -30,30 +36,4 @@ exports.sendMessage = async (req, res) => {
         console.log(e);
         res.render('404'); 
     }
-}
-
-function validator({ name, email, message }){
-    if(!name || !email || (email && !isEmail(email))|| !message){
-        console.log('errors', 'Preencha todos os campos');
-    }
-}
-
-// function cleanUp(){
-//     for(let key in req.body){
-//         if(typeof req.body[key] !== 'string'){
-//             req.body[key] = '';
-//         }
-// }
-
-function isEmail(email){
-    let pattern = /.*@[^0-9.][a-z]*\..*/g;
-    let result = false;
-    if(pattern.exec(email)){
-        result = true;
-    }
-    else{
-        result = false;
-    }
-
-    return result;
 }
