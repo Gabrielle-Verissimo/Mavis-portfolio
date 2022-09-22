@@ -34,11 +34,11 @@ function openModal(e){
     })
 
     btnClose.classList = 'btn-close';
-    btnClose.innerHTML = '<i class="fas fa-times"></i>'; //
+    btnClose.innerHTML = '<i class="fas fa-times"></i>';
     a.setAttribute('href', urlImg);
     a.setAttribute('target', 'blank');
     img.setAttribute('src', urlImg);
-    a.appendChild(img);
+    //a.appendChild(img);
     background.classList = 'backModal';
     modal.classList = 'modal';
     info.classList = 'info';
@@ -56,20 +56,47 @@ function openModal(e){
         }
     };
 
-    areaImg.appendChild(a);
+    areaImg.appendChild(img);
     modal.appendChild(areaImg);
     modal.appendChild(info);
     modal.appendChild(btnClose);
     background.appendChild(modal);
     body.appendChild(background);
     body.classList.add('no-scroll');
+    img.addEventListener('click', openImg);
     btnClose.addEventListener('click', closeModal);
 }
 
-function closeModal(){ //se der erro colocar o 'e'
+function closeModal(){
     const background = document.querySelector('.backModal');
     const body = document.querySelector('body');
     body.classList.remove('no-scroll');
     background.parentNode.removeChild(background);
     
+}
+
+function openImg({ target }){
+    const body = document.querySelector('body');
+    const urlImg = target.getAttribute('src');
+    const backImg = document.createElement('div');
+    const containerImg = document.createElement('div');
+    const btnClose = document.createElement('span');
+    const img = document.createElement('div');
+    btnClose.classList = 'btn-close-2';
+    btnClose.innerHTML = '<i class="fas fa-times"></i>';
+    img.classList = 'img-open';
+    img.style.backgroundImage = `url('${urlImg}')`;
+    backImg.classList = 'back-img';
+    containerImg.classList = 'container-img-open';
+    //img.setAttribute('src', urlImg);
+    backImg.appendChild(btnClose);
+    containerImg.appendChild(img);
+    backImg.appendChild(containerImg);
+    body.appendChild(backImg);
+    btnClose.addEventListener('click', closeImg);
+}
+
+function closeImg(){
+    const backImg = document.querySelector('.back-img');
+    backImg.parentNode.removeChild(backImg);
 }
